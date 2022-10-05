@@ -116,7 +116,7 @@ def train_vpp():
             learning_rate = ReduceLROnPlateau(monitor = "val_loss", factor = 0.5, patience = 10, verbose = verbose)
             early_stopping = EarlyStopping(monitor = "val_loss", patience = 60, verbose = verbose, mode = "min", 
                                            restore_best_weights = True)
-            model_checkpoint = ModelCheckpoint(path_models + model.name + ".hdf5", monitor = "val_loss", verbose = verbose, save_best_only = True, 
+            model_checkpoint = ModelCheckpoint(path_models + model.name + str(fold) + ".hdf5", monitor = "val_loss", verbose = verbose, save_best_only = True, 
                                                mode = "auto", save_freq = "epoch")
 
             # Training

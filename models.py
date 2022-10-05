@@ -13,6 +13,11 @@ import tensorflow.keras.layers as layer
 
 
 def gru_net(data):
+    """This function creates a GRU model in TensorFlow."""
+    # Input:
+    # data; NumPy array, data fed into the model, here only relevant to find out the input shape
+    # Output:
+    # model; TensorFlow / Keras model, model for training and testing
 
     x_input = layer.Input(shape = (data.shape[-2:]))
 
@@ -32,6 +37,11 @@ def gru_net(data):
 
 
 def gru_net_big(data):
+    """This function creates a big GRU model in TensorFlow."""
+    # Input:
+    # data; NumPy array, data fed into the model, here only relevant to find out the input shape
+    # Output:
+    # model; TensorFlow / Keras model, model for training and testing
 
     x_input = layer.Input(shape = (data.shape[-2:]))
 
@@ -56,6 +66,11 @@ def gru_net_big(data):
 
 
 def lstm_net_big(data):
+    """This function creates a big LSTM model in TensorFlow."""
+    # Input:
+    # data; NumPy array, data fed into the model, here only relevant to find out the input shape
+    # Output:
+    # model; TensorFlow / Keras model, model for training and testing
 
     x_input = layer.Input(shape = (data.shape[-2:]))
 
